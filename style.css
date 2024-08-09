@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-family: "Inter";
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #09090B;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  margin: auto;
+  margin-top: 40px;
+  gap: 32px;
+
+  font-family: var(--font-family);
+}
+
+.left-side form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  all: unset;
+}
+
+form input,
+select,
+button {
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 56px;
+  border: 1px solid #27272A;
+  border-radius: 12px;
+  background-color: #09090B;
+  color: #F4F4F5;
+}
+
+.input-wrapper:focus-within {
+  outline: 2px solid yellowgreen;
+}
+
+#location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 22px 16px;
+
+  font-size: 14px;
+  margin-bottom: 32px;
+  background-color: #18181B;
+}
+
+#activity {
+  background-color: #09090B;
+  color: #A1A1AA
+}
+
+#time {
+  margin-bottom: 12px;
+}
+
+#saveActivityButton, #testebutton {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #BEF264;
+  color: #1A2E05;
+
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+
+  cursor: pointer;
+}
+
+.crazy-box-shadow {
+  box-shadow:
+    0px 8px 8px rgba(0, 0, 0, 0.1),
+    0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+
+  border-radius: 12px;
+}
+
+
+
+.right-side {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  color: #F4F4F5;
+  font-size: 16px;
+}
+
+.date-info {
+  font-size: 14px;
+  color: #A1A1AB;
+  text-align: right;
+}
+
+.right-side h1 {
+  margin-bottom: 24px;
+  color: #FAFAFA;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+
+.atividadeCriada {
+  position: relative;
+  padding: 10px 16px;
+  /* margin-bottom: 12px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #18181B;
+}
+
+.atividadeCriada input[type="checkbox"] {
+  position: absolute;
+  inset: 0;
+}
+
+.atividadeCriada:has(:checked) .active,
+.atividadeCriada .inactive {
+  display: block;
+}
+
+.atividadeCriada:has(:checked) .inactive,
+.atividadeCriada .active {
+  display: none;
+}
+
+.atividadeCriada>div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#noActivityText {
+  display: block;
+  color: #71717A;
+}
+
+#line, #otherline {
+  margin-top: 10px;
+  padding: 2px;
+  border: none;
+  border-radius: 12px;
+  background: #18181B;
+}
